@@ -42,7 +42,7 @@ from azureml.core.model import Model
 def init():
     global model
     # Get the path to the deployed model file and load it
-    model_path = Model.get_model_path('porto_seguro_safe_driver_model.pkl')
+    model_path = Model.get_model_path('driver_training_model.pkl')
     model = joblib.load(model_path)
 
 # Called when a request is received

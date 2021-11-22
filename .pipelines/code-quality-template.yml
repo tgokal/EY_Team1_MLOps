@@ -5,14 +5,14 @@ steps:
 # #   displayName: 'Run lint tests'
 
 - script: |   
-   python -m pytest . --cov=driver_training --cov-report=html --cov-report=xml --junitxml=unit-testresults.xml
-  condition: succeededOrFailed()
-  displayName: 'Run unit tests'
-
-- script: |   
    pip install lightgbm
   condition: succeededOrFailed()
   displayName: 'Install lightgbm'
+
+- script: |   
+   python -m pytest . --cov=driver_training --cov-report=html --cov-report=xml --junitxml=unit-testresults.xml
+  condition: succeededOrFailed()
+  displayName: 'Run unit tests'
 
 # # - task: PublishTestResults@2
 # #   condition: succeededOrFailed()

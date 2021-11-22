@@ -9,6 +9,11 @@ steps:
   condition: succeededOrFailed()
   displayName: 'Run unit tests'
 
+- script: |   
+   pip install lightgbm
+  condition: succeededOrFailed()
+  displayName: 'Install lightgbm'
+
 # # - task: PublishTestResults@2
 # #   condition: succeededOrFailed()
 # #   inputs:
